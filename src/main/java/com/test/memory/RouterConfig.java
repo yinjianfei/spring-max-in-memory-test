@@ -22,6 +22,7 @@ public class RouterConfig {
     }
 
     private Mono<ServerResponse> handle(ServerRequest serverRequest) {
+        log.info("size: {}", serverRequest.headers().contentLength());
         return serverRequest.bodyToMono(JsonNode.class)
                 .flatMap(body ->
                         ServerResponse.ok().syncBody(JsonNodeFactory.instance.objectNode())
