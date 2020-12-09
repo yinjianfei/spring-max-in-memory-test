@@ -1,6 +1,6 @@
 # spring-max-in-memory-test
 > just start this project on port 7800
-> using below comman request 7800
+> using below command request 7800
 ```
 curl --location --request POST 'http://localhost:7800/memory/test' \
 --header 'Content-Type: application/json' \
